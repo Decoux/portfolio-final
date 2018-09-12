@@ -184,6 +184,11 @@ textarea {
     .social {
       width: 50px;
     }
+
+    .social:hover {
+      padding: 5px;
+      transition: 1s;
+    }
     /*About*/
 
     .prez{
