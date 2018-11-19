@@ -18,6 +18,20 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+    var page = $(this).attr('href'); // Page cible
+    var speed = 350; // Durée de l'animation (en ms)
+    $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+    return false;
+    });
+  });
+  </script>
+
 </head>
 
 <body>
@@ -32,13 +46,13 @@
             <a class="font-weight-bold text-white nav-link" href="">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="font-weight-bold text-white nav-link" href="#page-2">About</a>
+            <a class="font-weight-bold text-white nav-link js-scrollTo" href="#page-2">About</a>
           </li>
           <li class="nav-item">
-            <a class="font-weight-bold text-white nav-link"  href="#page-2">Portfolio</a>
+            <a class="font-weight-bold text-white nav-link js-scrollTo"  href="#page-2">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="font-weight-bold text-white nav-link" href="#page-2">Contact</a>
+            <a class="font-weight-bold text-white nav-link js-scrollTo" href="#page-2">Contact</a>
           </li>
         </ul>
       </div>
@@ -54,7 +68,7 @@
       <article class="article">
         <div class="row">
           <div class="mx-auto col-8">
-            <p class="text-center text-size">
+            <p class="text-center  text-white text-size">
               <span class="italic">Je suis</span><br />
               apprenti<br />
               <span class="italic">développeur web</span>
@@ -62,8 +76,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="d-flex mx-auto">
-            <a href="#page-2" id="button"  class="js-scrollTo button">Regardez mon travail</a>
+          <div class="d-flex mx-auto font-weight-bold">
+            <a href="#page-2" id="button"  class="desktop js-scrollTo button">Regardez mon travail</a>
           </div>
         </div>
         <div class="row mt-5">
@@ -72,7 +86,7 @@
           </div>
         </div>
       <div class="mt-5">
-        <p class="text-center font-weight-bold"id="demo"></p>
+        <p class="text-center font-weight-bold text-white"id="demo"></p>
       </div>
     </article>
     <article id="page-2" class="">
@@ -88,13 +102,16 @@
     </article>
     <article class="mt-5">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 mobile">
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -104,10 +121,19 @@
                 <a href="https://github.com/Decoux/PaireGame2"><img class="d-block w-100" src="img/Paires_game.png" alt="Second slide"></a>
               </div>
               <div class="carousel-item">
-                <a href="https://github.com/Decoux/calculator"><img class="d-block w-100" src="img/calculator.png" alt="Third slide"></a>
+                <a href="https://github.com/Decoux/calculator"><img class="d-block w-100" src="img/calaculette.png" alt="Third slide"></a>
               </div>
               <div class="carousel-item">
-                <a href="https://github.com/Decoux/behance"><img class="d-block w-100" src="img/behance.png" alt="Third slide"></a>
+                <a href="https://github.com/Decoux/behance"><img class="d-block w-100" src="img/behance.png" alt="behance"></a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://github.com/YesWeWeb/PBA-Amelie-Balen-Paul"><img class="d-block w-100" src="img/pba.png" alt="pba"></a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://github.com/Decoux/pfc"><img class="d-block w-100" src="img/PFC.png" alt="PFC"></a>
+              </div>
+              <div class="carousel-item">
+                <a href="https://github.com/Decoux/pfc"><img class="d-block w-100" src="img/formulaire_inscription.png" alt="formulaire_inscription"></a>
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -121,11 +147,11 @@
           </div>
         </div>
         <div class="col-12 col-md-6">
-            <form class="">
-              <input type="text" class="input" placeholder="Votre nom">
-              <input type="text" class="input" placeholder="Votre adresse mail">
-              <input type="text" class="input" placeholder="Le sujet de votre message">
-              <textarea name="textarea"
+            <form class="" action="form.php" method="post">
+              <input name="name" type="text" class="input font-weight-bold" placeholder="Votre nom">
+              <input name="mail" type="text" class="input font-weight-bold" placeholder="Votre adresse mail">
+              <input name="description" type="text" class="input font-weight-bold" placeholder="Le sujet de votre message">
+              <textarea  name="message" class="font-weight-bold text-white" name="textarea"
                  rows="4" cols="50">
               </textarea>
               <input class="send" type="submit" value="Envoyer">
@@ -138,7 +164,7 @@
   <footer>
 
 
-      <a href="https://www.linkedin.com/in/paul-decoux-11854515a/"><img class="social" src="img/LinkedIn-logo-271x271.png" alt=""></a>
+      <a href="https://www.linkedin.com/in/paul-decoux-632669175/"><img class="social" src="img/LinkedIn-logo-271x271.png" alt=""></a>
       <a href="https://twitter.com/Decoux28580365"><img class="social" src="img/twitter.png" alt=""></a>
 
   </footer>

@@ -105,11 +105,17 @@ textarea {
    body{
      display: flex;
      flex-direction: column;
+     background-color: black;
+   }
+
+   header{
+    border-bottom: 3px solid gray;
    }
 
    .intro{
      text-align: center;
      font-weight: bold;
+     color: white;
    }
 
    .article{
@@ -121,13 +127,14 @@ textarea {
    }
 
    .button {
-      background-color: #4CAF50; /* Green */
+      background-color: white;
       border: none;
-      color: white;
+      color: black;
       padding: 15px 32px;
       text-align: center;
       text-decoration: none;
       font-size: 16px;
+      box-shadow: 0px 0px 10px white;
     }
 
     .arrow{
@@ -140,11 +147,12 @@ textarea {
     }
 
     .button:hover{
-      background-color: black;
+      background-color: gray;
       transition: all 0.5s ease;
       cursor: pointer;
       color: white;
       text-decoration: none;
+      box-shadow: 0px 0px 10px gray;
     }
 
     .italic{
@@ -171,6 +179,16 @@ textarea {
       flex-direction: column;
     }
 
+    .my-picture {
+      border: 3px solid white;
+    }
+
+    .my-picture:hover {
+      width: 180px;
+      height: 180px;
+      transition: 0.3s;
+    }
+
     /*FOOTER*/
     footer{
       display: flex;
@@ -179,6 +197,7 @@ textarea {
       position: fixed;
       bottom: 0;
       width: 100%;
+      border-top: 3px solid gray;
     }
 
     .social {
@@ -193,6 +212,7 @@ textarea {
 
     .prez{
       font-size: 17px;
+      color: white;
     }
     /*Portfolio*/
 
@@ -211,6 +231,17 @@ textarea {
       width: 100%;
       box-shadow: 0px 15px 29px 0px black;
 
+    }
+
+    .carousel {
+      opacity: 0.7;
+      box-shadow: 0px 0px 35px gray;
+      border: 3px solid white;
+    }
+
+    .carousel:hover {
+      opacity: inherit;
+      transition: 0.3s;
     }
     /*Contact*/
 
@@ -247,8 +278,9 @@ textarea {
 
     .input:hover{
       background-color: black;
-      transition: 1s;
+      transition: 0.2s;
       color: white;
+      box-shadow: 0px 0px 7px gray;
     }
 
     .send{
@@ -258,16 +290,42 @@ textarea {
     .send:hover{
       background-color: red;
       transition: 1s;
+      box-shadow: 0px 0px 7px gray;
+    }
+
+    textarea{
+      background-color: gray;
+      border: 0;
+    }
+
+    textarea:hover{
+      background-color: black;
+      transition: 0.2s;
+      box-shadow: 0px 0px 7px gray;
     }
 
     .desktop{
       display: none;
     }
 
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    }
+
+    .mobile{
+      display: none;
+    }
+
+
+
     @media (min-width:768px) {
 
       .desktop{
         display: flex;
+      }
+
+      .mobile{
+        display: block;
       }
       /*======css contact.html=========*/
 
