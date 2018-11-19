@@ -243,6 +243,35 @@ textarea {
       opacity: inherit;
       transition: 0.3s;
     }
+
+    .orientation {
+      transform: rotateX(40deg);
+      width: 150px;
+    }
+
+    .orientation:hover {
+      transform: rotateX(0deg);
+      transition: 0.3s;
+    }
+
+    .parent{
+      perspective: 1000px;
+    }
+
+    .abs{
+      position: absolute;
+      left: 50%;
+    }
+
+    .w-100{
+      width: 400px!important;
+      box-shadow: 0px 0px 15px gray;
+    }
+
+    .w-100:hover {
+      width: 600px !important;
+    }
+
     /*Contact*/
 
     .coordonnées{
