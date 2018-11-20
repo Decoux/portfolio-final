@@ -22,3 +22,21 @@ if (isset($name) && isset($mail) && isset($description) && isset($message)){
         }
     }
 }
+
+< ? php 
+        
+        /*$myArray = array("https://github.com/Decoux/Ecommerce-Nicolas-Paul" => "img/E-commerce.png",
+                        "https://github.com/Decoux/PaireGame2" => "img/Paires_game.png",
+                        "https://github.com/Decoux/calculator" => "img/calaculette.png",
+                        "https://github.com/Decoux/behance" => "img/behance.png",
+                        "https://github.com/YesWeWeb/PBA-Amelie-Balen-Paul" => "img/pba.png",
+                        "https://github.com/Decoux/pfc" => "img/PFC.png",
+                        "https ://github.com/Decoux/pfc" => "img/formulaire_inscription.png"
+                      );
+
+        ?>
+        <?php foreach ($myArray as $key => $value){ ?>
+          <div class="col-12 col-md-7 mx-auto abs_2 parent ">
+            <a href=" <?php echo $key; ?> "><img class="mx-auto orientation d-block w-100" src=" <?php echo $value ; ?> " alt="<?php echo $value; ?>"></a>
+          </div>
+        <?php } */ ?> 
