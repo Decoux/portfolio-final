@@ -52,7 +52,7 @@
             <a class="font-weight-bold text-white nav-link js-scrollTo"  href="#page-2">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="font-weight-bold text-white nav-link js-scrollTo" href="#page-2">Contact</a>
+            <a class="font-weight-bold text-white nav-link js-scrollTo" href="#page-3">Contact</a>
           </li>
         </ul>
       </div>
@@ -102,25 +102,43 @@
     </article>
     <article class="mt-5">
       <div class="row mobile">
-        <div class="col-md-7 mx-auto abs_1 parent">
+        <?php 
+        
+        /*$myArray = array("https://github.com/Decoux/Ecommerce-Nicolas-Paul" => "img/E-commerce.png",
+                        "https://github.com/Decoux/PaireGame2" => "img/Paires_game.png",
+                        "https://github.com/Decoux/calculator" => "img/calaculette.png",
+                        "https://github.com/Decoux/behance" => "img/behance.png",
+                        "https://github.com/YesWeWeb/PBA-Amelie-Balen-Paul" => "img/pba.png",
+                        "https://github.com/Decoux/pfc" => "img/PFC.png",
+                        "https ://github.com/Decoux/pfc" => "img/formulaire_inscription.png"
+                      );
+
+        ?>
+        <?php foreach ($myArray as $key => $value){ ?>
+          <div class="col-12 col-md-7 mx-auto abs_2 parent ">
+            <a href=" <?php echo $key; ?> "><img class="mx-auto orientation d-block w-100" src=" <?php echo $value ; ?> " alt="<?php echo $value; ?>"></a>
+          </div>
+        <?php } */ ?> 
+        
+       <div class="col-12 col-md-7 mx-auto abs_1 parent">
           <a href="https://github.com/Decoux/Ecommerce-Nicolas-Paul"> <img class="mx-auto orientation d-block w-100" src="img/E-commerce.png" alt="First slide"></a>
         </div>
-        <div class="col-md-7 mx-auto abs_2 parent ">
+        <div class="col-12 col-md-7 mx-auto abs_2 parent ">
           <a href="https://github.com/Decoux/PaireGame2"><img class="mx-auto orientation d-block w-100" src="img/Paires_game.png" alt="Second slide"></a>
         </div>
-        <div class="col-md-7 mx-auto abs_3 parent">
+        <div class="col-12 col-md-7 mx-auto abs_3 parent">
           <a href="https://github.com/Decoux/calculator"><img class="mx-auto orientation d-block w-100" src="img/calaculette.png" alt="Third slide"></a>
         </div>
-        <div class="col-md-7 mx-auto abs_4 parent">
+        <div class="col-12 col-md-7 mx-auto abs_4 parent">
           <a href="https://github.com/Decoux/behance"><img class="mx-auto orientation d-block w-100" src="img/behance.png" alt="behance"></a>
         </div>
-          <div class="col-md-7 mx-auto abs_5 parent">
+          <div class="col-12 col-md-7 mx-auto abs_5 parent">
           <a href="https://github.com/YesWeWeb/PBA-Amelie-Balen-Paul"><img class="mx-auto orientation d-block w-100" src="img/pba.png" alt="pba"></a>
         </div>
-        <div class="col-md-7 mx-auto abs_5 parent">
+        <div class="col-12 col-md-7 mx-auto abs_5 parent">
           <a href="https://github.com/Decoux/pfc"><img class="mx-auto orientation d-block w-100" src="img/PFC.png" alt="PFC"></a>
         </div>
-        <div class="col-md-7 mx-auto abs_5 parent">
+        <div class="col-12 col-md-7 mx-auto abs_5 parent">
           <a href="https://github.com/Decoux/pfc"><img class="mx-auto orientation d-block w-100" src="img/formulaire_inscription.png" alt="formulaire_inscription"></a>
         </div>
       </div>
@@ -169,7 +187,7 @@
             </a>
           </div>
         </div> -->
-        <div class="col-12 col-md-12 mx-auto">
+        <div id="page-3" class="col-12 col-md-12 mx-auto">
             <form class="" action="form.php" method="post">
               <input name="name" type="text" class="input font-weight-bold" placeholder="Votre nom">
               <input name="mail" type="text" class="input font-weight-bold" placeholder="Votre adresse mail">
