@@ -106,6 +106,7 @@ textarea {
      display: flex;
      flex-direction: column;
      background-color: black;
+     font-family: 'Heebo', sans-serif;
    }
 
    header{
@@ -156,7 +157,7 @@ textarea {
     }
 
     .italic{
-        font-family: 'Galada', cursive;
+        font-family: 'Galada', cursive!important;
 
     }
 
@@ -267,6 +268,22 @@ textarea {
       width: 600px !important;
     }
 
+    .size-circle {
+      width: 10px;
+      height: 10px;
+    }
+
+    .m-circle {
+      margin-top: 6px;
+      margin-left: 10px;
+    }
+
+    .m{
+      margin-top: -10px;
+    }
+
+
+
     /*Contact*/
 
     .coordonnées{
@@ -358,6 +375,12 @@ textarea {
         flex-direction: row;
         margin: auto;
       }
+
+
+
+    
+
+      
 
       /*=======CSS portfolio.html==========*/
 
